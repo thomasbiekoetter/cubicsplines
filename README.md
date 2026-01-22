@@ -1,6 +1,6 @@
 # cubicsplines
 
-`cubicsplines` is a modern Fortran package for **one-dimensional cubic spline interpolation**, including evaluation of the **function value**, **first derivative**, and **second derivative**.  
+cubicsplines is a modern Fortran package for **one-dimensional cubic spline interpolation**, including evaluation of the **function value**, **first derivative**, and **second derivative**.  
 It is numerically robust, thread-safe and compatible with the Fortran Package Manager (FPM).
 
 ---
@@ -53,7 +53,7 @@ use cubicsplines__interp, only : spline_construct
 use cubicsplines__interp, only : spline_getval
 ```
 
-* `wp` is the working precision kind used throughout the package. By default, it is set to double precision. To use quadruple precision, one has to define the preprocessor the preprocessor macro `QUAD` at compilation: `fpm build --flag="-DQUAD"
+* `wp` is the working precision kind used throughout the package. By default, it is set to double precision. To use quadruple precision, one has to define the preprocessor macro `QUAD` at compilation: `fpm build --flag="-DQUAD"
 * `spline_construct` computes the spline coefficients.
 * `spline_getval` evaluates the spline or its derivatives.
 
@@ -155,6 +155,4 @@ end do
 ## License
 
 This project is licensed under the **MIT License**.
-
-```
 
