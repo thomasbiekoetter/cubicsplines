@@ -145,6 +145,38 @@ end do
 
 ---
 
+Here’s a clear, self-contained **“Data smoothing”** section for your README that explains how to use the `add_viscosity` function. I’ve written it in the same style as the rest of your README:
+
+````markdown
+---
+
+## Data smoothing
+
+The package provides a simple **smoothing function** `add_viscosity` that can be used to reduce noise in your data. It applies an iterative artificial-viscosity scheme to the input array.
+
+### Usage example
+
+```fortran
+use cubicsplines__smoothing, only : add_viscosity
+
+real(wp) :: y_smooth(number_nodes)
+
+y_smooth = add_viscosity( &
+    x, y, number_nodes, eps=1.0_wp, iterations=100)
+```
+
+* The function preserves the endpoints using a **virtual neighbor** approach
+* Increasing the optional arguments `eps` or `iterations` increases the smoothing effect
+* The function assumes **regularly spaced grid points**. The smoothing strength is scaled by the square of the grid spacing
+
+### Notes
+
+* This method is suitable for **suppressing small-scale oscillations** in data before interpolation
+* It is **pure** and does not modify the input array
+* For large arrays, many iterations can be computationally expensive
+
+---
+
 ## Requirements
 
 * Fortran compiler supporting Fortran 2008 or newer
