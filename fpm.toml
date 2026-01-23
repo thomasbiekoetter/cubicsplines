@@ -24,4 +24,8 @@ csv-fortran = { git="https://github.com/jacobwilliams/csv-fortran.git" }
 name = "trigo"
 source-dir = "test"
 main = "trigo.f90"
+[[test]]
+name = "smoothing"
+source-dir = "test"
+main = "smoothing.f90"
 
