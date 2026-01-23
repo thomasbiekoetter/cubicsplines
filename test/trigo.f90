@@ -75,8 +75,8 @@ contains
     call f%initialize(verbose=.true.)
 
     call f%open(  &
-      "plots/trigo/trigo_exact.csv",  &
-      n_cols=4,  &
+      "plots/trigo/exact.csv",  &
+      n_cols=2,  &
       status_ok=status_ok)
 
     call f%add(["x0", "y0"])
@@ -111,7 +111,7 @@ contains
     call f%initialize(verbose=.true.)
 
     call f%open(  &
-      "plots/trigo/trigo_interp.csv",  &
+      "plots/trigo/interp.csv",  &
       n_cols=4,  &
       status_ok=status_ok)
 

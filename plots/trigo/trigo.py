@@ -2,8 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-df = pd.read_csv("trigo_interp.csv")
-dg = pd.read_csv("trigo_exact.csv")
+df = pd.read_csv("interp.csv")
+dg = pd.read_csv("exact.csv")
 
 plt.plot(
     df['x  '],
