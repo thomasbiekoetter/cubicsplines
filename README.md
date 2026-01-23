@@ -145,11 +145,6 @@ end do
 
 ---
 
-Here’s a clear, self-contained **“Data smoothing”** section for your README that explains how to use the `add_viscosity` function. I’ve written it in the same style as the rest of your README:
-
-````markdown
----
-
 ## Data smoothing
 
 The package provides a simple **smoothing function** `add_viscosity` that can be used to reduce noise in your data. It applies an iterative artificial-viscosity scheme to the input array.
