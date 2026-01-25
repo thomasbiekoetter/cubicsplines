@@ -28,4 +28,8 @@ main = "trigo.f90"
 name = "smoothing"
 source-dir = "test"
 main = "smoothing.f90"
+[[test]]
+name = "const"
+source-dir = "test"
+main = "const.f90"
 
