@@ -1,7 +1,6 @@
 module cubicsplines__interp
 
   use cubicsplines__config, only : wp
-  use error_handling, only: error_t, fail
 
   implicit none
 
@@ -43,12 +42,8 @@ contains
     integer :: j
     integer :: gap
     real(wp) :: h
-    class(error_t), allocatable :: error
 
-    if (n < 2) then
-      error = fail('construct_spline(): argument n must be >= 2.')
-      error stop error%to_chars()
-    end if
+    if (n < 2) error stop 'construct_spline(): argument n must be >= 2.'
 
     gap = n - 1
 
@@ -150,7 +145,6 @@ contains
     real(wp) :: uu
     real(wp) :: dx
     integer :: deriv
-    class(error_t), allocatable :: error
 
     if (present(derivative)) then
       deriv = derivative
@@ -199,8 +193,7 @@ contains
     else if (deriv == 2) then
       ispline = 2.0e0_wp * c(i) + 6.0e0_wp * d(i) * dx
     else
-      error = fail('spline_getval(): argument derivative must be 0, 1 or 2.')
-      error stop error%to_chars()
+      error stop 'spline_getval(): argument derivative must be 0, 1 or 2.'
     end if
 
   end function spline_getval
