@@ -24,7 +24,7 @@ Add `cubicsplines` as a dependency in your `fpm.toml`:
 
 ```toml
 [dependencies]
-cubicsplines = { git = "https://github.com/thomas.biekoetter/cubicsplines" }
+cubicsplines = { git = "https://github.com/thomasbiekoetter/cubicsplines" }
 ````
 
 Then build your project with:
